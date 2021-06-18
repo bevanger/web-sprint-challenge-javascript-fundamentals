@@ -29,11 +29,11 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
- let sum = 0;
+ let count = 0;
  for (let i = 1; i <= number; i++){
-   sum += i;
+   count += i;
  }
- return sum;
+ return count;
   }
   
 
@@ -61,8 +61,10 @@ const zooAnimals = [
   */
   
   
-   function animalNames(){
-  }
+  function animalNames(){
+   
+   }
+
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -224,8 +226,8 @@ class CuboidMakerTwo{
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+ //console.log(cuboidTwo.volume()); // 100
+ //console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
@@ -233,7 +235,17 @@ class CuboidMakerTwo{
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
-
+class CubeMaker extends CuboidMaker{
+  constructor(properties){
+    super(properties);
+  }
+  volume(){
+    return this.length * this.width * this.height;
+  }
+  surfaceArea(){
+    return 6 * this.length * this.width;
+  }
+}
 
 
 
