@@ -124,7 +124,9 @@ const zooAnimals = [
 function add(num1, num2){
     return num1 + num2;
   }
-
+  console.log(consume(2, 2, add));
+  console.log(consume(10, 16, multiply));
+  console.log(consume("Mary", "Poppins", greeting));
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
 function multiply(num1, num2){
@@ -133,8 +135,8 @@ function multiply(num1, num2){
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(first, last){
+   return `Hello ${first} ${last}, nice to meet you!`
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
