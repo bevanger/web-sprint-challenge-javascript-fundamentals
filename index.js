@@ -54,9 +54,11 @@ const zooAnimals = [
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  
+ 
+   function animalNames(){
+   
+    
   }
   
 
@@ -66,8 +68,11 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(name){
+  const newArray = name.map(function(item){
+    return item.animal_name.toLowerCase();
+  });
+  return newArray;
   }
   
   
@@ -76,8 +81,13 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(pop){
+  const population = pop.filter(function(item){
+    if(item.population < 5){
+      return item;
+    }
+  });
+  return population;
   }
   
 
@@ -87,8 +97,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array){
+  const pop = array.reduce(function(acc,item){
+  return acc + item.population;
+  },0);
+  return pop;
   }
   
   
